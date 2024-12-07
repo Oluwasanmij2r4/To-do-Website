@@ -6,38 +6,44 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Todo app</title>
+  <title>My-Todo</title>
 
   <link rel="stylesheet" href="style/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <script src="main/main.js" defer></script>
 </head>
+
 <body>
-<Header>
-<div class="hero_text">Todo</div>
-<div>
-  <input type="text" name="task" id="task_box" placeholder="create a new todo"><i class="fas fa-search fa-circle"></i>
-</div>
-</Header>
-  
-<div class="task_section task_text">
-  <!-- Add dynamic number --> No Task Assign Yet!!
-   </div>
-
-  <div class="footer">
-    <p>All</p>
-    <p>Active</p>
-    <p>Completed</p>
-    <p>Clear Completed</p>
+  <main class="header_container">
+  <div class="container">
+    <div class="hero_text">Todo</div>
+    <div class="hero_img"><img src="images/icon-moon.svg" alt="light"></div>
   </div>
 
- 
-
-  <div class="last_text">Drag and drop to reorder list</div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="input_box">
+    <input type="text" name="task" id="task_box" placeholder="Create a new todo">
+     <i class="fas fa-plus plus"></i>
   </div>
+
+
+  <div class="task_section container">
+    <p class="task_text">No Task Assign Yet!!</p>
+     </div>
+
+     <div class="footer">
+      <p>All</p>
+      <p>Active</p>
+      <p>Completed</p>
+      <p>Clear Completed</p>
+    </div>
+
+
+    <div class="last_text">Drag and drop to reorder list</div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main> 
 </body>
 </html>
