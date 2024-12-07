@@ -1,7 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 *{
     box-sizing: border-box;
 }
 
+body{
+    margin: 0;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 1.2rem;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.header_container{
+    background-image: url(/images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+}
+
+.container{
+    width: 50%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.hero_text, .hero_img{
+    padding: 3.5rem 0;
+    color: white;
+}
+
+.hero_text{
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.input_box{
+    width: 50%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input::placeholder{
+    padding-left: .5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: hsl(236, 9%, 61%);
+}
+
+#task_box{
+    flex-grow: 1;
+    padding: 1.5rem 0;
+    border: .2rem solid white;
+    border-radius: 1rem;
+}
+.plus{
+    color: white;
+    font-size: 3.5rem;
+    opacity: .6;
+    padding: .5rem;
+    border: .2rem solid white;
+    border-radius: 1rem;
+}
+
+.task_section{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    font-size: 3rem;
+}
+
+.task_text{
+    margin: auto 0;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
