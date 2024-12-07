@@ -8,25 +8,25 @@ body{
     margin: 0;
     font-family: 'Josefin sans', sans-serif;
     font-size: 1.2rem;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 7%, 95%);
 }
 
 .header_container{
     background-image: url(/images/bg-desktop-light.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30vh;
+    max-height: 60vh;
 }
 
 .container{
-    width: 50%;
+    width: 80%;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 .hero_text, .hero_img{
-    padding: 3.5rem 0;
+    padding: 3rem 0;
     color: white;
 }
 
@@ -38,7 +38,7 @@ body{
 }
 
 .input_box{
-    width: 50%;
+    width: 80%;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
@@ -48,22 +48,22 @@ body{
 
 input::placeholder{
     padding-left: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: hsl(236, 9%, 61%);
 }
 
 #task_box{
     flex-grow: 1;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     border: .2rem solid white;
     border-radius: 1rem;
 }
 .plus{
     color: white;
-    font-size: 3.5rem;
+    font-size: 3rem;
     opacity: .6;
-    padding: .5rem;
+    padding: .2rem;
     border: .2rem solid white;
     border-radius: 1rem;
 }
@@ -72,13 +72,51 @@ input::placeholder{
     background-color: white;
     display: flex;
     justify-content: center;
-    height: 40vh;
-    font-size: 3rem;
+    min-height: 80vh;
+    border: .2rem solid white;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: hsl(235, 19%, 35%);
+    margin-bottom: 2rem;
 }
 
 .task_text{
     margin: auto 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.footer{
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: white;
+    color: hsl(236, 9%, 61%);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.center_text{
+    display: flex;
+    margin: 0 auto;
+    gap: .75rem;
+}
+
+.right_text{
+    margin-right: .75rem;
+}
+
+.left_text{
+    margin-left: .75rem;
+}
+
+.last_sec{
+    margin-top: 4rem;
+}
+
+.last_text{
+    color: hsl(236, 9%, 61%);
+    margin: 0 auto;
+    font-size: 1rem;
+}
