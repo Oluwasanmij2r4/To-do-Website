@@ -49,15 +49,19 @@ body{
 input::placeholder{
     padding-left: .5rem;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 500;
     color: hsl(236, 9%, 61%);
 }
 
 #task_box{
     flex-grow: 1;
-    padding: 1rem 0;
+    padding: .5rem 0;
     border: .2rem solid white;
     border-radius: 1rem;
+    color: rgb(39, 39, 39);
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
 }
 .plus{
     color: white;
@@ -72,7 +76,7 @@ input::placeholder{
     background-color: white;
     display: flex;
     justify-content: center;
-    min-height: 80vh;
+    min-height: 75vh;
     border: .2rem solid white;
     border-radius: 1rem;
     font-size: 2rem;
@@ -119,4 +123,40 @@ input::placeholder{
     color: hsl(236, 9%, 61%);
     margin: 0 auto;
     font-size: 1rem;
+}
+
+@media (min-width: 800px){
+.container, .footer, .input_box{
+    width: 50%;
+    max-width: 900px;
+}
+
+.hero_text, .hero_img{
+    padding: 3.5rem 0;
+}
+
+.hero_text{
+    font-size: 3rem;
+}
+
+.input_box{
+    margin-bottom: 2.5rem;
+}
+
+input::placeholder{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#task_box{
+    padding: 2rem 0;
+}
+
+.plus{
+    padding: 1rem;
+}
+
+.task_section{
+    min-height: 65vh;
+}
 }
