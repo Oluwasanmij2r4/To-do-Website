@@ -50,3 +50,19 @@ addTask.addEventListener("click", () => {
     taskCount.textContent = `${taskNumber} item${taskNumber > 1 ? "s" : ""}`;
   });
 });
+
+document.getElementById("light_image").addEventListener("click", () => {
+document.querySelector(".hero_img").classList.add("active");
+});
+document.getElementById("dark_image").addEventListener("click", () => {
+  document.querySelector(".hero_img").classList.remove("active");
+});
+
+
+
+document.getElementById("light_image").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+document.getElementById("dark_image").addEventListener("click", () => {
+  document.body.classList.remove("dark-mode");
+});
