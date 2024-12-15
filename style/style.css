@@ -152,8 +152,9 @@ body.dark-mode .footer{
   gap: 0.75rem;
 }
 
-.right_text {
+#right_text {
   margin-right: 0.75rem;
+  cursor: pointer;
 }
 
 .left_text {

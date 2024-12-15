@@ -2,10 +2,10 @@ const input = document.querySelector("input");
 const addTask = document.querySelector(".plus");
 const taskSec = document.querySelector(".task_section");
 const taskCount = document.querySelector(".left_text");
+// const clear = document.querySelector(".right_text")
 let taskNumber = 0;
 
 addTask.addEventListener("click", () => {
-  //   taskSec.textContent = "";
   const inputValue = input.value;
   input.value = "";
 
@@ -51,14 +51,32 @@ addTask.addEventListener("click", () => {
   });
 });
 
+document.getElementById("right_text").addEventListener("click", () => {
+  const allTasks = taskSec.querySelectorAll(".task_style");
+
+  allTasks.forEach((task) => {
+    const icon = task.querySelector(".fa-check-circle");
+
+    if (icon) {
+      task.remove();
+    }
+  });
+
+  if (taskNumber < 0) taskNumber = 0;
+
+  taskCount.textContent = `${taskNumber} item${taskNumber > 1 ? "s" : ""}`;
+
+  // if (taskNumber === 0) {
+  //   taskSec.textContent = "No tasks left";
+  // }
+});
+
 document.getElementById("light_image").addEventListener("click", () => {
-document.querySelector(".hero_img").classList.add("active");
+  document.querySelector(".hero_img").classList.add("active");
 });
 document.getElementById("dark_image").addEventListener("click", () => {
   document.querySelector(".hero_img").classList.remove("active");
 });
-
-
 
 document.getElementById("light_image").addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
