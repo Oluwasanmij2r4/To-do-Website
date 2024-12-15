@@ -11,8 +11,23 @@ body {
   background-color: hsl(0, 7%, 95%);
 }
 
-.header_container {
+body.dark-mode{
+  background-color: hsl(235, 21%, 11%);
+}
+
+#light_image, #dark_image{
+  max-width: 100%;
+}
+
+.header {
   background-image: url(/images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 60vh;
+}
+
+body.dark-mode .header{
+  background-image: url(/images/bg-desktop-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 60vh;
@@ -33,6 +48,18 @@ body {
 .hero_img {
   padding: 3rem 0;
   color: white;
+}
+
+#dark_image{
+  display: none;
+}
+
+.hero_img.active #dark_image {
+  display: block;
+}
+
+.hero_img.active #light_image {
+  display: none;
 }
 
 .hero_text {
@@ -68,6 +95,13 @@ input::placeholder {
   font-weight: 400;
   text-transform: capitalize;
 }
+
+body.dark-mode #task_box{
+  background-color: hsl(235, 24%, 19%);
+  border: .1rem solid hsl(235, 24%, 19%);
+  color: hsl(236, 33%, 92%);
+}
+
 .plus {
   color: white;
   font-size: 3rem;
@@ -81,11 +115,17 @@ input::placeholder {
   background-color: white;
   text-align: center;
   min-height: 75vh;
-  border: 0.2rem solid white;
+  border: 0.1rem solid white;
   border-radius: 1rem;
   font-size: 2rem;
   color: hsl(235, 19%, 35%);
   margin-bottom: 2rem;
+}
+
+body.dark-mode .task_section{
+  background-color: hsl(235, 24%, 19%);
+  border: .1rem solid hsl(235, 24%, 19%);
+  color: hsl(236, 33%, 92%);
 }
 
 .footer {
@@ -99,6 +139,11 @@ input::placeholder {
   color: hsl(236, 9%, 61%);
   font-size: 1rem;
   font-weight: 800;
+}
+
+body.dark-mode .footer{
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(236, 33%, 92%);
 }
 
 .center_text {
@@ -137,9 +182,17 @@ input::placeholder {
   color: hsl(236, 9%, 61%);
 }
 
+body.dark-mode .text_style{
+  color: hsl(236, 33%, 92%);
+}
+
 .text_style.active {
   text-decoration: line-through;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 5px;
+}
+
+body.dark-mode .text_style.active{
+  text-decoration-color: hsl(235, 21%, 11%);
 }
 
 .text_style::first-letter {
@@ -154,6 +207,7 @@ input::placeholder {
 .icon.active {
   color: hsl(235, 60%, 57%);
 }
+
 
 @media (min-width: 800px) {
   .container,
