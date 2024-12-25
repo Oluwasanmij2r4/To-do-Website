@@ -21,14 +21,14 @@ body.dark-mode{
 }
 
 .header {
-  background-image: url(../images/bg-desktop-light.jpg);
+  background-image: url('../images/bg-desktop-light.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 50vh;
 }
 
 body.dark-mode .header{
-  background-image: url(../images/bg-desktop-dark.jpg);
+  background-image: url('../images/bg-desktop-dark.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 50vh;
