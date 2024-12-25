@@ -224,14 +224,16 @@ body.dark-mode .text_style.active{
 @media (max-width: 650px) {
   .hero_text,
 .hero_img {
-  padding: calc(2rem + .5vw) 0;
+  padding: calc(1.5rem + .5vw) 0;
 }
   .header {
   background-image: url('../images/bg-mobile-light.jpg');
+  max-height: 45vh;
 }
 
 body.dark-mode .header{
   background-image: url('../images/bg-mobile-dark.jpg');
+  max-height: 45vh;
 }
   #task_box {
   max-width: 80%;
@@ -239,12 +241,23 @@ body.dark-mode .header{
 
 .plus{
   max-width: 20%;
-  font-size: 1.5rem;
+  font-size: calc(1rem + .5vw);
   padding: 1rem;
+}
+.task_section {
+  min-height: 55vh;
+  font-size: 1.2rem;
 }
  .footer{
   font-size: calc(.5rem + .5vw);
  }
+ .last_sec {
+  padding: .7rem 0;
+}
+
+.last_text {
+  font-size: .7rem;
+}
 }
 
 @media (min-width: 800px) {
