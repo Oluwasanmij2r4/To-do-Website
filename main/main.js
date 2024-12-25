@@ -2,7 +2,6 @@ const input = document.querySelector("input");
 const addTask = document.querySelector(".plus");
 const taskSec = document.querySelector(".task_section");
 const taskCount = document.querySelector(".left_text");
-// const clear = document.querySelector(".right_text")
 let taskNumber = 0;
 
 addTask.addEventListener("click", () => {
@@ -51,25 +50,65 @@ addTask.addEventListener("click", () => {
   });
 });
 
-document.getElementById("right_text").addEventListener("click", () => {
+function handleTasks(action) {
   const allTasks = taskSec.querySelectorAll(".task_style");
 
   allTasks.forEach((task) => {
     const icon = task.querySelector(".fa-check-circle");
+    const allIcon = task.querySelector(".icon")
 
-    if (icon) {
+    if (action === "all" && allIcon){
+      task.style.display = "";
+    } else if (action === "remove" && icon) {
       task.remove();
+    } else if (action === "filter") {
+      if (icon && icon.classList.contains("fa-check-circle")) {
+        task.style.display = "none";
+      } else {
+        task.style.display = "";
+      }
+    } else if (action === "show-completed"){
+      if(icon){
+        task.style.display = "";
+      } else {
+        task.style.display = "none"
+      }
     }
   });
+}
 
-  if (taskNumber < 0) taskNumber = 0;
+function setActiveButton(activeButton) {
+  const buttons = document.querySelectorAll(".button");
+  buttons.forEach((button) => button.classList.remove("active-button"));
 
-  taskCount.textContent = `${taskNumber} item${taskNumber > 1 ? "s" : ""}`;
+  activeButton.classList.add("active-button");
+}
 
-  // if (taskNumber === 0) {
-  //   taskSec.textContent = "No tasks left";
-  // }
+
+document.getElementById("right_text").addEventListener("click", () => {
+  handleTasks("remove");
 });
+
+document.getElementById("active_task").addEventListener("click", (e) => {
+  handleTasks("filter");
+
+  setActiveButton(e.currentTarget);
+});
+
+document.getElementById("all").addEventListener("click", (e) => {
+  handleTasks("all");
+
+  setActiveButton(e.currentTarget);
+});
+
+document.getElementById("comp").addEventListener("click", (e) => {
+  handleTasks("show-completed");
+
+  setActiveButton(e.currentTarget);
+});
+
+
+
 
 document.getElementById("light_image").addEventListener("click", () => {
   document.querySelector(".hero_img").classList.add("active");

@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Josefin sans", sans-serif;
   font-size: 1.2rem;
   background-color: hsl(0, 7%, 95%);
@@ -23,14 +24,14 @@ body.dark-mode{
   background-image: url(/images/bg-desktop-light.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 60vh;
+  max-height: 50vh;
 }
 
 body.dark-mode .header{
   background-image: url(/images/bg-desktop-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 60vh;
+  max-height: 50vh;
 }
 
 .container {
@@ -46,7 +47,7 @@ body.dark-mode .header{
 
 .hero_text,
 .hero_img {
-  padding: 3rem 0;
+  padding: calc(3rem + .5vw) 0;
   color: white;
 }
 
@@ -65,7 +66,7 @@ body.dark-mode .header{
 .hero_text {
   text-transform: uppercase;
   letter-spacing: 1rem;
-  font-size: 2rem;
+  font-size: calc(2rem + .5vw);
   font-weight: 700;
 }
 
@@ -75,25 +76,24 @@ body.dark-mode .header{
   margin: 0 auto;
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: calc(1.5rem + .5vw);
 }
 
 input::placeholder {
   padding-left: 0.5rem;
-  font-size: 1.2rem;
+  font-size: calc(1rem + .7vw);
   font-weight: 500;
   color: hsl(236, 9%, 61%);
 }
 
 #task_box {
   flex-grow: 1;
-  padding: 0.5rem 0;
+  padding: calc(0.5rem + 1vw) 0;
   border: 0.2rem solid white;
   border-radius: 1rem;
   color: rgb(39, 39, 39);
   font-size: 2rem;
   font-weight: 400;
-  text-transform: capitalize;
 }
 
 body.dark-mode #task_box{
@@ -106,9 +106,11 @@ body.dark-mode #task_box{
   color: white;
   font-size: 3rem;
   opacity: 0.6;
-  padding: 0.2rem;
+  padding: calc(0.2rem + 1vw);
   border: 0.2rem solid white;
   border-radius: 1rem;
+  display: flex;
+  align-content: center;
 }
 
 .task_section {
@@ -119,7 +121,7 @@ body.dark-mode #task_box{
   border-radius: 1rem;
   font-size: 2rem;
   color: hsl(235, 19%, 35%);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 body.dark-mode .task_section{
@@ -137,8 +139,8 @@ body.dark-mode .task_section{
   gap: 1rem;
   background-color: white;
   color: hsl(236, 9%, 61%);
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: calc(1rem + .5vw);
+  font-weight: 900;
 }
 
 body.dark-mode .footer{
@@ -162,7 +164,9 @@ body.dark-mode .footer{
 }
 
 .last_sec {
-  margin-top: 4rem;
+  /* margin-top: 2rem; */
+  padding: 1rem 0;
+  text-align: center;
 }
 
 .last_text {
@@ -209,6 +213,14 @@ body.dark-mode .text_style.active{
   color: hsl(235, 60%, 57%);
 }
 
+.active-button {
+  color: hsl(235, 60%, 57%);
+}
+
+#all, #active_task, #comp, .left_text{
+  cursor: pointer;
+}
+
 
 @media (min-width: 800px) {
   .container,
@@ -217,33 +229,6 @@ body.dark-mode .text_style.active{
     width: 50%;
     max-width: 900px;
   }
-
-  .hero_text,
-  .hero_img {
-    padding: 3.5rem 0;
-  }
-
-  .hero_text {
-    font-size: 3rem;
-  }
-
-  .input_box {
-    margin-bottom: 2.5rem;
-  }
-
-  input::placeholder {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  #task_box {
-    padding: 2rem 0;
-  }
-
-  .plus {
-    padding: 1rem;
-  }
-
   .task_section {
     min-height: 65vh;
   }
